@@ -1,0 +1,38 @@
+.white-button{
+    background-color: $white;
+    color: $darkblue;
+    font-weight: bolder;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 200px;
+
+    &:hover, &:focus{
+        background-color: $darkblue;
+        color: $white;
+    }
+
+    &:active{
+        background-color: $activeblue;
+    }
+}
+
+.darkblue-button{
+    background-color: $darkblue;
+    color: $white;
+    &:hover{
+        
+    }
+}
+
+.about-me-button{
+    width: 150px;
+
+    &:hover{
+        background-color: #ACDDE7;
+        color: $darkblue;
+    }
+
+}

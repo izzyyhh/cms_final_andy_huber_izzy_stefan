@@ -1,0 +1,26 @@
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 150px;
+    color: $darkblue;
+    -webkit-box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow:    2px 2px 20px 0px rgba(50, 50, 50, 1);
+    box-shadow:         2px 2px 20px 0px rgba(50, 50, 50, 1);
+    background-color: $white;
+    padding: 1.2rem .5rem;
+    .logo-name{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: -1px;
+        font-weight: 800;
+        font-family:'Rokkitt', sans-serif;
+    }
+    .logo-extra{
+        font-size: .8rem;
+        text-transform: uppercase;
+        margin-top: -2px;
+    }
+}

@@ -1,0 +1,38 @@
+section.environmental-issues{
+    ul{
+        margin-top: 2rem;
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        li{
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+            div{
+
+                position: relative;
+                height: 400px;
+                width: 260px;
+
+                span{
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 10px;
+                }
+            
+                img{
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    filter: brightness(70%);
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}
