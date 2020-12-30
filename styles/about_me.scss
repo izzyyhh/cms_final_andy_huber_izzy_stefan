@@ -31,6 +31,8 @@ section.about-me{
     }
 }
 
+
+
 @include breakpoint(tablet){
     section.about-me{
         div.about-me-box{
@@ -58,3 +60,32 @@ section.about-me{
     }
 }
 
+@include breakpoint(desktop1){
+    section.about-me{
+        div.about-me-box{
+            margin: 0 auto;
+            max-width: 1100px;
+            height:  540px;
+
+            div:nth-of-type(1){
+
+            }
+
+            div:nth-of-type(2){
+                padding: 0;
+                h3{
+                    font-size: $headingSize + 2rem;
+                    line-height: $headingSize + 3.5rem;
+                    font-weight: bolder;
+                }
+                h3,p{
+                    padding: 0 2rem;
+                }
+
+                a{
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+}

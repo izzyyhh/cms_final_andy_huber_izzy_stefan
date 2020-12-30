@@ -4,15 +4,43 @@ header{
     background-size: cover;
     height: 500px;
 
+    @include breakpoint(desktop1){
+        height: 600px;
+        
+        .header-wrapper{
+            max-width: 1910px;
+            margin: 0 auto;
+        }
+        padding: 2rem 4rem 2rem 4rem;
+    }
+    @include breakpoint(desktop2){
+        font-size: 1.2rem;
+        height: 700px;
+    }
+
     nav{
         display: flex;
+        @include breakpoint(desktop2){
+            max-width: 1910px;
+            margin: 0 auto;
+        }
         justify-content: space-between;
     }
 
     h1{  
+        max-width: 30ch;
         margin-top: 18rem;
+        @include breakpoint(desktop1){
+            margin-top: 21rem;
+            font-size: 2.8rem;
+        }
+        @include breakpoint(desktop2){
+            font-size: $headingSize + 1.5rem;
+            margin-top: 25rem;
+
+        }
     }
-    
+
     a.white-button{
         margin-top: 2rem;
     }

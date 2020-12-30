@@ -12,3 +12,24 @@ $hamburger-hover-opacity       : 0.7;
 .active-nav{
     left: 0 !important;
 }
+
+@include breakpoint(desktop1){
+    #hamburger{
+        display: none;
+    }
+    header{
+        nav{
+            align-items: center;
+        }
+    }
+    #navigation{
+        width: 500px;
+        position: initial;
+    }
+}
+
+@include breakpoint(desktop2){
+    #navigation{
+        width: 600px;
+    }
+}

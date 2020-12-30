@@ -3,8 +3,13 @@ section.environmental-issues{
         margin-top: 2rem;
         width: 100%;
         display: flex;
-        overflow-x: scroll;
+        overflow-x: auto;
         overflow-y: hidden;
+
+        @media only screen and(min-width: 1460px){
+            justify-content: center;
+            gap: 1rem;
+        }
 
         li{
             padding: 0 1rem;
@@ -14,6 +19,7 @@ section.environmental-issues{
                 position: relative;
                 height: 400px;
                 width: 260px;
+
 
                 span{
                     color: $white;
@@ -31,7 +37,13 @@ section.environmental-issues{
                     filter: brightness(70%);
                     object-fit: cover;
                     object-position: center;
+                    transition: 0.1s;
+                    &:hover{
+                        filter: brightness(100%);
+                    }
                 }
+
+
             }
         }
     }
@@ -49,3 +61,17 @@ section.environmental-issues{
         }
     }
 }
+@include breakpoint(desktop2){
+    section.environmental-issues{
+        ul{
+            li{
+                div{
+                    height:400px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+ 

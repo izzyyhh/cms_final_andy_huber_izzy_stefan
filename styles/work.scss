@@ -59,7 +59,15 @@ section.work{
 
 @include breakpoint(tablet){
     section.work{
+        display: flex;
+        flex-direction: column;
+        
         .work-grid{
+            @include breakpoint(desktop1){
+                max-width: 1910px;
+                margin: 0 -4rem;
+                grid-template-rows: minmax(auto, 280px) minmax(auto, 280px);
+            }
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
         

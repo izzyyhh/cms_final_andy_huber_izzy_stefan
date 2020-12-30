@@ -9,6 +9,10 @@
         height: 30px;
         width: 170px;
     }
+    @include breakpoint(desktop2){
+        height: 55px;
+        width: 200px;
+    }
     color: $darkblue;
     -webkit-box-shadow: 2px 2px 20px 0px rgba(50, 50, 50, 1);
     -moz-box-shadow:    2px 2px 20px 0px rgba(50, 50, 50, 1);
@@ -20,6 +24,9 @@
         font-size: 1.5rem;
         @include breakpoint(tablet){
             font-size: 1.7rem;
+        }
+        @include breakpoint(desktop2){
+            font-size: 2rem;
         }
         letter-spacing: -1px;
         font-weight: 800;
