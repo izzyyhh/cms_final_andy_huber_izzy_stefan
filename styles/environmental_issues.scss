@@ -36,3 +36,16 @@ section.environmental-issues{
         }
     }
 }
+
+@include breakpoint(tablet){
+    section.environmental-issues{
+        ul{
+            li{
+                div{
+                    height:330px;
+                    width: 230px;
+                }
+            }
+        }
+    }
+}
