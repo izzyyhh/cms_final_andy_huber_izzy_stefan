@@ -7,10 +7,10 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const glob = require('glob');
 const path = require('path');
 
-const themeName = 'alex';
+const themeName = 'andy_huber';
 const pluginFolder = `public/wp-content/plugins`;
 const themeFolder  = `public/wp-content/themes/${themeName}`;
-const phpServerUrl = "alex-wp.localhost";
+const phpServerUrl = "andy.localhost";
 
 module.exports = {
   entry: { main:'./src/index.js' },

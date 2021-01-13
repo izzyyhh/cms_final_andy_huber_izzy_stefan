@@ -7,7 +7,7 @@ $hamburger-layer-color         : $white;
 $hamburger-layer-border-radius : 1px;
 $hamburger-hover-opacity       : 0.7;
 
-@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 .active-nav{
     left: 0 !important;
