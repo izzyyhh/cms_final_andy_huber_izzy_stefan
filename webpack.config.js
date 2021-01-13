@@ -127,6 +127,11 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
+      { from: 'vendor/',
+        to: `${path.resolve(__dirname, themeFolder)}/vendor`,
+        flatten: false,
+        copyUnmodified: true
+      },
       { from: 'src/favicons/*',
         to: path.resolve(__dirname, 'public/'),
         flatten: true
