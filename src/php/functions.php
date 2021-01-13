@@ -18,8 +18,8 @@ function cc_mime_types($mimes) {
 }
 
 add_filter('upload_mimes', 'cc_mime_types');
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts_and_styles' );
 add_action( 'after_setup_theme', 'add_title_tag');
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts_and_styles' );
 add_theme_support( 'post-thumbnails' );
 
 //for timber

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {{ function('wp_head') }}
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <nav>
+                <a href="#">
+                    <div class="logo">
+                        <div class="logo-name">ANDYHUBER</div>
+                        <div class="logo-extra">Water solutions</div>
+                    </div>
+                </a>
+                
+                <button id="hamburger" class="hamburger hamburger--spin" type="button"
+                aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+                <ul id="navigation">
+                    <li><a class="nav-links" aria-current="page" href="#">HOME</a></li>
+                    <li><a class="nav-links" href="#">MY WORK</a></li>
+                    <li><a class="nav-links" href="#">BLOG</a></li>
+                    <li><a class="nav-links" href="#">ABOUT</a></li>
+                    <li><a class="nav-links" href="#">CONTACT</a></li>
+                </ul>
+
+            </nav>
+            <h1>Making Water Safe is an Emergency</h1>
+            <a class="white-button" href="#">Learn what I do</a>
+        </div>
+    </header>
+ <div class="main-wrapper">
+        <main>
+            <section>
+                <h2>Lorem Ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    magna aliquyam erat, sed diam voluptua. </p>
+            </section>
+            <section class="work">
+                <h2>Check out my <a href="#">work</a></h2>
+                <div class="work-grid">
+                    <div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/shower-1027904_640.jpg" alt="#"><span class="work-name">Lorem Ipsum</span></a></div>
+                    <div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/chemical-87781_640.jpg" alt="#"><span class="work-name">Lorem Ipsum dolor</span></a></div>
+                    <div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/water-3902916_1280.jpg" alt="#"><span class="work-name">Lorem Ipsum dolor sit</span></a></div>
+                </div>
+            </section>
+            <section class="environmental-issues">
+                <h2>Environmental Issues</h2>
+                <p>I write about all sorts of environmental Issues to raise awareness about the problems. check out
+                    my blog if you're interested.
+                </p>
+                <ul>
+                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/mountains-482689_640.jpg" alt="#"><span>Climate</span></a></div></li>
+                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/wind-farm-1747331_640.jpg" alt="#"><span>Energy</span></a></div></li>
+                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/industry-1761801_640.jpg" alt="#"><span>Air</span></a></div></li>
+                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/tree-3822149_640.jpg" alt="#"><span>Ecosystems</span></a></div></li>
+                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/ecology-4202701_640.jpg" alt="#"><span>Water</span></a></div></li>
+                </ul>
+            </section>
+            <section class="about-me">
+                <h2>About me</h2>
+                <div class="about-me-box">
+                    <div><img src="{{ function('get_template_directory_uri') }}/images/fred-852770_640.jpg" alt="me"></div>
+                    <div class="me-info">
+                        <h3 class="me-name">
+                            Andy Huber
+                        </h3>
+                        <p class="me-info-text">
+                            Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy
+                            eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, sed diam
+                            voluptua. Lorem ipsum dolor sit amet, consetetur
+                            sadipscing elitr, sed diam nonumy
+                            eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, sed diam
+                            voluptua.
+                        </p>
+                        <a class="white-button about-me-button" href="#">Read more</a>
+                    </div>
+                </div>
+            </section>
+            <section class="donate">
+                <h2>Donate</h2>
+                <p>You too can contribute to helping our environment by donating to various environmental
+                    organisations. Here are just a few.
+                </p>
+                <ul>
+                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/Download.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
+                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/The_Water_Project_Logo.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
+                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/donation1.jpg" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
+                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/Download.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <div>
+                    <ul class="footer-social-media-links">
+                        <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/twitter.svg" alt="twitter"></a></li>
+                        <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/linkedin.svg" alt="linkedin"></a></li>
+                        <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/facebook.svg" alt="facebook"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="footer-page-links">
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">IMPRINT</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-text">
+                Andy Huber © Copyright 2020 | All rights reserved | Design by Izzy & Stefan
+            </div>
+        </div>
+    </footer>
+    
+    {{ function('wp_footer') }}
+</body>
+</html>
