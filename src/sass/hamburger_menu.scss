@@ -1,0 +1,94 @@
+$hamburger-layer-color: #00B9F2;
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+#burger-button{
+    display: none;
+}
+.active-links{
+    left:0 !important;
+}
+
+label.burger{
+    display: block;
+    width: 60px;
+    height: 50px;
+    position: relative; 
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@include breakpoint(mobTab){
+    #burger-button{
+        display: block;
+    }
+    h1{
+        mark{
+            max-width: 10ch;
+        }
+    }    
+
+    #navbar{
+        nav{
+            align-self: center;
+            margin-bottom: 5px;
+        }
+
+        @include breakpoint(mobile){
+            height: 80px;
+            align-items: center;
+            .logo{
+                font-size: $heading2FontSite + 1rem;
+            }
+            nav{
+                margin-bottom: 15px;
+            }
+        }
+        height: 100px;
+        .logo{
+            margin: 0;
+            padding: 0 .5em;
+        }
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu{
+        position: absolute;
+        @include breakpoint(mobile){
+            top: 80px;
+        }
+        @include breakpoint(tablet){
+            top: 100px;
+        }
+        top: 0;
+        left:-1500px;
+        background-color: $white;
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 120vw;
+
+        transition: all .2s ease-in-out;
+        z-index: 10;
+        
+        li{
+            &:hover{
+                background-color: $blueBg;
+            }
+            font-size: 2.2rem;
+            padding: 1rem 0;
+            padding-left: 2rem;
+            border-bottom: $black solid 1px;
+            &:nth-child(1){
+                border-top: $black solid 1px;
+            }
+        }
+        a{
+            display:inline-block;
+        }
+    }
+}
+

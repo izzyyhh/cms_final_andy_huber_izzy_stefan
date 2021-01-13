@@ -1,0 +1,40 @@
+@mixin breakpoint($medium){
+
+    @if($medium == tablet){
+        @media only screen and(min-width: 571px) and (max-width: 1139px){
+            @content;
+        }
+    }
+    @else if($medium == largescreens){
+        @media only screen and (min-width: 2300px){
+            @content;
+        }
+    }
+    @else if($medium == mobile){
+        @media only screen and (max-width: 570px){
+            @content;
+        }
+    }
+    @else if($medium == desktop){
+        @media only screen and (min-width:1140px) and (max-width: 1535px){
+            @content;
+        }
+    }
+    @else if($medium == bigdesk){
+        @media only screen and (min-width: 1535px) and (max-width: 2300px){
+            @content;
+        }
+    }
+    @else if($medium == mobTab){
+        @media only screen and (max-width: 1139px)
+        {
+            @content;
+        }
+    }
+    @else if($medium == noMobTab){
+        @media only screen and (min-width: 1140px)
+        {
+            @content;
+        }
+    }
+}
