@@ -1,683 +1,90 @@
-// @import url('https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap');
-@import "fonts.scss";
-@import "var.scss";
-@import "breakpoints.scss";
-@import "hamburger_menu.scss";
-@import "single-post.scss";
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Slabo 13px', serif;
-}
-
-:root{
-    @include breakpoint(mobile){
-        font-size: 10px;
-    }
-    @include breakpoint(tablet){
-        font-size: 10px;
-    }
-    @include breakpoint(desktop){
-        font-size: 12px;
-    }
-    @include breakpoint(bigdesk){
-        font-size: 12px;
-    }
-    @include breakpoint(largescreens){
-        font-size: 13px;
-    }
-
-}
-
-html {
-    scroll-behavior: smooth;
-    @include breakpoint(mobTab){
-        overflow-x: hidden;
-    }        
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700;800;900&display=swap');
+@import 'breakpoints.scss';
+@import 'reset.scss';
+@import 'vars.scss';
+@import 'logo.scss';
+@import 'header.scss';
+@import 'hamburger.scss';
+@import 'buttons.scss';
+@import 'work.scss';
+@import 'environmental_issues.scss';
+@import 'about_me.scss';
+@import 'donate.scss';
+@import 'footer.scss';
 
 body{
-    min-width: 430px;
-    font-size: $pageFontSize;
-}
-
-p{
-    max-width: 90ch;
-}
-a{
-    text-decoration: none;
-    color: $black;
-}
-
-button{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    font-size: $pageFontSize;
-    cursor: pointer;
-}
-
-.hero-btn{
-    background-color: $btnGreen;
-    color: $white;
-    font-size: 3rem;
-    width: 450px;
-    padding: .4em 0;
-    margin-top: .5em;
-    border-radius: 5px;
-    &:hover{
-        background-color: #359038;;
-    }
-    @include breakpoint(mobile){
-        width: 100%;
-        padding: 1.5rem 0;
-        margin: 0;                        
-    }        
-
-}
-
-h1{
-    font-size: $headingFontSize;
-    color: $blueAccent;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 h2{
-    font-size: $heading2FontSite;
-    color: $blueAccent;
-    font-weight: normal;
-}
-
-h3{
-    font-size: $pageFontSize;
-    color: $white;
-    font-weight: normal;
-}
-
-header{
-    @include breakpoint(mobile){
-        height: initial;
-    }        
-
-    .navbar{
-        @include breakpoint(noMobTab){
-
-            div.logo{
-                margin-left: 3rem;
-            }
-
-            .menu{
-                display: flex;
-                justify-content: space-between;
-                max-width: 600px;
-            }
-
-        }   
-     
-        padding-top: .5em;
-        .logo{
-            margin-left: .8em;
-            color: $blueAccent;
-            font-size: $headingFontSize;
-            grid-column: 1/2;
-            @include breakpoint(mobile){
-                margin:0;
-                padding: 0;
-                font-size: $heading2FontSite;
-            }              
-        }
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        font-size: $pageFontSize;
-
-        @include breakpoint(mobile){
-            display: block;
-        }
-    
-
-        nav{
-            height: 58%;
-            align-self: end;
-            grid-column: 2/3;
-
-            a{
-                //width: 100%;
-                &:hover{
-                    background-color: $blueBg;
-                    transition: all linear .1s;
-                }
-            }
-            .active{
-                a{
-                    border-bottom: $blueAccent solid 2px;
-                    color: $blueAccent;
-                }
-            }       
-        }
-        div{
-            ul{
-                margin-bottom: .5em;
-                list-style: none;
-                li{
-                    margin-right: .5em;
-                    display: inline-block;
-                }
-            }   
-        }
-        ul{
-            margin-bottom: .5em;
-            list-style: none;
-            li{
-                margin-right: .5em;
-                display: inline-block;
-            }
-        }   
+    font-size: $heading2Size;
+    @include breakpoint(desktop1){
+        font-size: $heading2Size + 1rem;
     }
+    @include breakpoint(desktop2){
 
-    .hero{
-        @include breakpoint(mobile){
-            display: block;
-            padding: 0 2.5rem;
-            height: 80vh;
-            min-height: 588px;      
-        }
-        
-        @include breakpoint(tablet){
-            display: flex;
-            padding-left: 2rem;
-        }
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        // background: url("../images/illuminated-keyboard-1242287.jpg");
-        background-size: cover;
-        height: 600px;
-
-        div{
-            @include breakpoint(mobile){
-                height: 80%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }        
-        
-            grid-column: 2/3;
-
-            h1{
-                font-weight: normal;
-                max-width: 50ch;
-                line-height: 1.35em;
-                @include breakpoint(mobile){
-                    justify-self: flex-start;
-                }        
-            
-
-                mark{
-                    display: inline;
-                    padding: 0px .3em;
-                    -webkit-box-decoration-break: clone;
-                    -webkit-box-decoration-break: clone;
-                    box-decoration-break: clone;
-                    background-color: white;
-                    color: $blueAccent;
-                }
-            }
-        }
     }
-}
-
-main > section{
-    margin-top: 2em;  
+    font-weight: bold;
 }
 
 section > h2{
-    margin-bottom: .5em;
+    margin-bottom: 1rem;
+    @include breakpoint(desktop1){
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+main{
+    section:nth-of-type(1){
+        margin-top: 3rem;
+        @include breakpoint(desktop1){
+            margin-top: 5rem;
+        }
+    }
+    section:last-of-type{
+        margin-bottom: 3rem;
+
+        @include breakpoint(desktop1){
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+section + section  {
+    margin-top: 3rem;
+    @include breakpoint(desktop1){
+        margin-top: 5rem;
+    }
+}
+
+p{
+    font-size: $fontSize;
+    line-height: 1.4rem;
+    @include breakpoint(desktop1){
+        font-size: $fontSize + .2rem;
+        line-height: 1.6rem;
+    }
+    max-width: 100ch;
 }
 
 main{
-    padding: 0 3em;
-    @include breakpoint(mobile){
-        padding: 0 2.5rem;                 
-    }
-    @include breakpoint(tablet){
-        padding: 0 2rem;                 
-    }
-
-
-    section.leistungen{
-        @include breakpoint(tablet){
-            ul{
-                flex-direction: column;
-            }
-        }
-    
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-
-            @include breakpoint(mobile){
-                flex-direction: column;
-            }        
-        
-    
-            li{
-                &:hover{
-                    -webkit-box-shadow: -1px -1px 10px 0px rgba(50, 50, 50, 0.75);
-                    -moz-box-shadow:    -1px -1px 10px 0px rgba(50, 50, 50, 0.75);
-                    box-shadow:         -1px -1px 10px 0px rgba(50, 50, 50, 0.75);
-                }
-            
-                @include breakpoint(mobile){
-                    margin-bottom: 2rem;                        
-                }        
-                      
-                &:nth-child(1){
-                    background-color: $yellowBg;
-                }
-                &:nth-child(2){
-                    background-color: $blueBg;
-                }
-                &:nth-child(3){
-                    background-color: $greenBg;
-                }
-                
-                @include breakpoint(mobile){
-                    width: 100%;
-                    height: 250px;                        
-                }
-
-                @include breakpoint(tablet){
-                    width: 100%;
-                    height: 280px;
-                    margin-bottom: 2rem;                       
-                }
-
-                @include breakpoint(desktop){
-                    height: 400px;
-                    width: 32%;
-                }        
-            
-                border-radius: 5px;
-                width: 32%;
-                height: 530px;
-
-                //width: 470px;
-                //height: 480px;
-                
-                a{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    @include breakpoint(mobile){
-                        flex-direction: row;
-                        justify-content: space-around;
-                    }
-                    @include breakpoint(tablet){
-                        flex-direction: row;
-                        justify-content: space-around;
-                    }
-            
-                
-                }
-                p{
-                    font-size: $pageFontSize;
-                    margin-bottom: 1em;
-                    font-weight: bold;
-                    color: $blueAccent;
-                    @include breakpoint(mobile){
-                        font-size: 2.3rem;
-                        margin: 0;                        
-                    }
-
-                    @include breakpoint(tablet){
-                        font-size: 2.3rem;
-                        margin: 0;
-                    }   
-                
-                }
-                img{
-                    width: 330px;
-                    @include breakpoint(mobile){
-                        width: 200px;
-                    }
-                    @include breakpoint(tablet){
-                        width: 260px;
-                    }
-                    @include breakpoint(desktop){
-                        width: 260px;
-                    }
-            
-                
-                }
-            }
-        }
-    }
-
-    section.news{
-    
-        @include breakpoint(mobile){
-            li{
-                margin-bottom: 1rem;
-            }
-        }        
-    
-        ul{
-            padding: .5em .5em;
-            border-radius: 5px;
-            background-color: $redBg;
-            list-style: none;
-
-            li{
-                padding: 5px 0;
-                p{
-                    line-height: 1.4em;
-                }
-            }
-        }
-
-        a{
-            color: $blueAccent;
-            font-size: .9em;
-        }
-
-        mark{
-            background-color: transparent;
-            color: $blueAccent;
-        }
-    }
-
-    section.references{
-
-        .references_grid{
-            @include breakpoint(noMobTab){
-                min-width: 1002px;
-            }
-            display: grid;
-            background-color: $blueBg;
-            grid-template-rows: repeat(3, minmax(auto, 7em));
-            grid-template-columns: repeat(8,minmax(0,1fr));
-            width: 100%;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            
-            .yellow{
-                background: $yellowBg;
-                @include breakpoint(noMobTab){
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                }
-            }
-
-            .lightblue{
-                background-color: $blueBg;
-            }
-
-            .darkblue{
-                background-color: $blueAccent;
-            }
-            .green {
-                background-color: $greenBg;
-            }
-
-            .img-tina{
-                grid-area: 1 / 1 / span 1 /  span 1;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .img-thomas{
-                grid-area: 1/ 4 / span 1 / span 1;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .img-vorstand{
-                grid-area: 1 / 6 / span 2 / span 3;
-                img{
-                    width: 100%;
-                    object-fit: cover;
-                    height: 100%;
-                }
-            }
-            .cite-ubuntu{
-                grid-area: 2 / 1 / span 1 / span 2;
-            }
-            .cite-redesign{
-                grid-area: 3 / 1 / span 1 / span 3;
-            }
-            .cite-cutters{
-                grid-area: 1 / 2 / span 1 / span 2;
-                text-align: right;
-            }
-            .cite-webkunst{
-                grid-area: 2 / 3 / span 1 / span 2;
-            }
-            .cite-quotes{
-                grid-area: 1 / 5 /span 2 / span 1;
-                img{
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-            .cite-vorstand{
-                grid-area: 3/ 5 /span 1/ span 4;
-                cite{
-                    text-align: right;
-                    font-style: normal;
-                    font-weight: 200;
-                    width: 100%;
-                    display: block; 
-                }
-                blockquote{
-                    margin-top: 1.15em;
-                }
-            }
-
-            @include breakpoint(mobile){
-                grid-template-columns: 1fr;
-                grid-template-rows: 20em auto auto 20em auto auto 20em auto 10em;//repeat(9, minmax(auto, 20em));
-                width: 100%;
-                
-                .img-tina{
-                    grid-area: 1 / 1 /span 1 /span 1;
-                    img{
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .cite-ubuntu{
-                    grid-area: 2 / 1 / span 1 / span 1;
-                    font-size: 0.9em;
-                }
-                .cite-redesign{
-                    font-size: 1.1em;
-                    grid-area: 3 / 1 / span 1 / span 1;
-                }
-                .img-thomas{
-                    grid-area: 4/ 1 / span 1 / span 1;
-                    img {
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .cite-cutters{
-                    text-align: left;
-                    font-size: 0.9em;
-                    grid-area: 5 / 1 / span 1 / span 1;
-                }
-                .cite-webkunst{
-                    grid-area: 6 / 1 / span 1 / span 1;
-                    font-size: 1.1em;
-                }
-                .img-vorstand{
-                    grid-area: 7 / 1 / span 1 / span 1;
-                    img{
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .cite-vorstand{
-                    grid-area: 9/ 1 /span 1/ span 1;
-                    cite{
-                        text-align: left;
-                        margin-bottom: 20px;
-                        font-size: 0.9em;
-                    }
-                    blockquote{
-                        font-size: 1.1em;
-                        width: 100%;
-                    }
-                }
-                .cite-quotes{
-                    grid-area: 10 / 1 /span 1/span 1;
-                    padding: 0;
-                    img{
-                        width: 50%;
-                        margin-right: 50%;
-                    }
-                }
-            }
-
-            @include breakpoint(tablet){
-                grid-template-columns: 200px 2fr 2fr;
-                grid-template-rows: repeat(7, minmax(auto, 5.5em));
-                width: 100%;
-
-                .img-tina{
-                    grid-area: 1 / 1 /span 2 / span 1;
-                    img{
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-                .cite-ubuntu{
-                    grid-area: 1 / 2 / span 1 / span 2;
-                }
-                .cite-redesign{
-                    grid-area: 2 / 2 / span 1 / span 2;
-                }
-
-                .img-thomas{
-                    grid-area: 3 / 1 / span 2 / span 1;
-                    img{
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                    
-                }
-                .cite-cutters{
-                    grid-area: 3 / 2 / span 1 / span 2;
-                    text-align: left;
-                }
-                .cite-webkunst{
-                    grid-area: 4 / 2 / span 1 / span 2;
-                }
-
-                .img-vorstand{
-                    grid-area: 5 / 1 / span 3 / span 2;
-                    img{
-                        object-fit: cover;
-                        max-height: 100%;
-                        margin-left: 0px;
-                    }
-                }
-                .cite-quotes{
-                    display: none;
-                }
-                .cite-vorstand{
-                    cite{
-                        text-align: left;
-                    }
-                    grid-area: 5/ 3/span 3/ span 1;
-                    blockquote{
-                        margin-top: 1.6em;
-                    }
-                }
-            }
-
-            div{
-                padding: 10px;
-            }
-
-        }
+    padding: 0 2rem;
+    @include breakpoint(desktop1){
+        padding: 0 4rem;
     }
 }
 
-footer{
-    @include breakpoint(mobile){
-        font-size: $pageFontSize - .5rem;
-        height: 1000px;        
-        padding-top: 2rem;
-        padding: 0 2.5rem;              
-    }        
-
-    height: 1700px;
-    padding: 0 3em;
-    margin-top: 3em;
-    color: $white;
-    background-color: $blueAccent;
-
-    a{
-        color: $white;
-    }
-
-    p{
-        max-width: 40ch;
-    }
-    section.impressum{
-        padding: 1.5em 0;
-        display: flex;
-        justify-content: space-between;
-    }
-    section.fotos{
-        ul{
-            padding-left: 1em;
-        }
-    }
-
-    section.icons{
-        margin-top: 1em;
-    }
-
-    ul{
-        li{
-            word-break: break-word;
-            display: inline-block;
-        }
-    }
-    
-}
-
-@include breakpoint(largescreens){
-    .wrapper{
+//@include breakpoint(desktop1){
+    .main-wrapper{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        section{
-            max-width: 2000px;
-        }
+        justify-content: center;
+        width: 100%;
+        max-width: 1910px;
+        margin: 0 auto;
     }
-    .footerwrapper{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 4em;
-        background-color: $blueAccent;
-        footer{
-            max-width: 2300px;
-            margin: 0;
-        }
-    }
-}
+//}
