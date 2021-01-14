@@ -35,6 +35,9 @@
             <h1>Making Water Safe is an Emergency</h1>
             <a class="white-button" href="#">Learn what I do</a>
         </div>
+        {% for post in posts %}
+            <h2>{{post.title}}</h2>
+        {% endfor %}
     </header>
  <div class="main-wrapper">
         <main>
