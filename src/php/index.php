@@ -3,4 +3,4 @@ $context = Timber::context();
 
 $context['posts'] = Timber::get_posts();
 
-Timber::render('views/base.twig', $context);
+Timber::render('views/frontpage.twig', $context);

@@ -3,8 +3,8 @@ require_once( __DIR__ . '/vendor/autoload.php' );
 
 // enqueue scripts and styles
 function enqueue_scripts_and_styles() {
-    wp_enqueue_style('main-styles', get_template_directory_uri().'/main.f949efa7dcf7d450cf32.css?bd962da2d35938be1e92', array(), null, false);
-    wp_enqueue_script( 'main-js', get_template_directory_uri().'/main.js?bd962da2d35938be1e92', array(), null, false );
+    wp_enqueue_style('main-styles', get_template_directory_uri().'/main.19a1f85881e0d3ad8fb7.css?ed184d036626d0654439', array(), null, false);
+    wp_enqueue_script( 'main-js', get_template_directory_uri().'/main.js?ed184d036626d0654439', array(), null, false );
 }
 
 // enable dynamic title tags
