@@ -127,7 +127,7 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([
-      { from: 'vendor/',
+      { from: './vendor/',
         to: `${path.resolve(__dirname, themeFolder)}/vendor`,
         flatten: false,
         copyUnmodified: true
