@@ -1,0 +1,15 @@
+<section class="about-me">
+    <h2>About me</h2>
+    <div class="about-me-box">
+        <div><img src="{{ about_me_post.thumbnail.src }}" alt="{{ about_me_post.thumbnail.alt }}"></div>
+        <div class="me-info">
+            <h3 class="me-name">
+                {{ about_me_post.title }}
+            </h3>
+            <p class="me-info-text">
+                {{ about_me_post.content|striptags }}
+            </p>
+            <a class="white-button about-me-button" href="{{ about_me_post.link }}">Read more</a>
+        </div>
+    </div>
+</section>

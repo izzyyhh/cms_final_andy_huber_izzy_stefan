@@ -1,4 +1,8 @@
 section.about-me{
+    p.me-info-text{
+        word-break: break-all;
+    }
+    
     div.about-me-box{
         margin: 0 -2rem;
         display: flex;

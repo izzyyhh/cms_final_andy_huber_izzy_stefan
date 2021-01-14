@@ -2,42 +2,13 @@
 
 {% block content %}
         <main>
-            <section>
-                <h2>Lorem Ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. </p>
-            </section>
 
+            {% include 'partials/paragraph.twig' %}
             {% include 'partials/work.twig' %}
             {% include 'partials/environmental-issues.twig' %}
-
-            <section class="about-me">
-                <h2>About me</h2>
-                <div class="about-me-box">
-                    <div><img src="{{ function('get_template_directory_uri') }}/images/fred-852770_640.jpg" alt="me"></div>
-                    <div class="me-info">
-                        <h3 class="me-name">
-                            Andy Huber
-                        </h3>
-                        <p class="me-info-text">
-                            Lorem ipsum dolor sit amet, consetetur
-                            sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et
-                            dolore magna aliquyam erat, sed diam
-                            voluptua. Lorem ipsum dolor sit amet, consetetur
-                            sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et
-                            dolore magna aliquyam erat, sed diam
-                            voluptua.
-                        </p>
-                        <a class="white-button about-me-button" href="#">Read more</a>
-                    </div>
-                </div>
-            </section>
-            
+            {% include 'partials/about-me.twig' %}
             {% include 'partials/donations.twig' %}
+
         </main>
 
 {% endblock %}
