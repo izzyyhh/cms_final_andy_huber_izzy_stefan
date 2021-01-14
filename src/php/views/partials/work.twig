@@ -1,0 +1,8 @@
+<section class="work">
+    <h2>Check out my <a href="#">work</a></h2>
+    <div class="work-grid">
+        {% for work in works %}
+            <div><a href="{{ work.link }}"><img src="{{ work.thumbnail.src }}" alt="{{ work.thumbnail.alt }}"><span class="work-name">{{ work.title }}</span></a></div>
+        {% endfor %}
+    </div>
+</section>
