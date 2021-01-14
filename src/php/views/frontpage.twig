@@ -48,18 +48,8 @@
                     </div>
                 </div>
             </section>
-            <section class="donate">
-                <h2>Donate</h2>
-                <p>You too can contribute to helping our environment by donating to various environmental
-                    organisations. Here are just a few.
-                </p>
-                <ul>
-                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/Download.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
-                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/The_Water_Project_Logo.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
-                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/donation1.jpg" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
-                    <li><div><img src="{{ function('get_template_directory_uri') }}/images/Download.png" alt="#"><a href="#" class="white-button darkblue-button" >Donate</a></div></li>
-                </ul>
-            </section>
+            
+            {% include 'partials/donations.twig' %}
         </main>
 
 {% endblock %}

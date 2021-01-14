@@ -1,0 +1,11 @@
+<section class="donate">
+    <h2>Donate</h2>
+    <p>You too can contribute to helping our environment by donating to various environmental
+        organisations. Here are just a few.
+    </p>
+    <ul>
+        {% for donate in donations %}
+            <li><div><img src="{{donate.thumbnail.src}}" alt="{{donate.thumbnail.alt}}"><a href="{{donate.link}}" class="white-button darkblue-button" >Donate</a></div></li>
+        {% endfor %}
+    </ul>
+</section>
