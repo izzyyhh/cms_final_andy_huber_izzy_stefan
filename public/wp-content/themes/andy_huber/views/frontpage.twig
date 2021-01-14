@@ -9,22 +9,10 @@
     amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
     magna aliquyam erat, sed diam voluptua. </p>
             </section>
-            
-            {% include 'partials/work.twig' %}
 
-            <section class="environmental-issues">
-                <h2>Environmental Issues</h2>
-                <p>I write about all sorts of environmental Issues to raise awareness about the problems. check out
-                    my blog if you're interested.
-                </p>
-                <ul>
-                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/mountains-482689_640.jpg" alt="#"><span>Climate</span></a></div></li>
-                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/wind-farm-1747331_640.jpg" alt="#"><span>Energy</span></a></div></li>
-                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/industry-1761801_640.jpg" alt="#"><span>Air</span></a></div></li>
-                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/tree-3822149_640.jpg" alt="#"><span>Ecosystems</span></a></div></li>
-                    <li><div><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/ecology-4202701_640.jpg" alt="#"><span>Water</span></a></div></li>
-                </ul>
-            </section>
+            {% include 'partials/work.twig' %}
+            {% include 'partials/environmental-issues.twig' %}
+
             <section class="about-me">
                 <h2>About me</h2>
                 <div class="about-me-box">
