@@ -24,11 +24,15 @@
                 </button>
 
                 <ul id="navigation">
-                    <li><a class="nav-links" aria-current="page" href="#">HOME</a></li>
+                    {% for item in menu.items %}
+                        <li><a class="nav-links" {{ item.current ? "aria-current='page'" : "" }} href="{{ item.link }}">{{ item.title }}</a></li>
+                    {% endfor %}
+
+                    {# <li><a class="nav-links" aria-current="page" href="#">HOME</a></li>
                     <li><a class="nav-links" href="#">MY WORK</a></li>
                     <li><a class="nav-links" href="#">BLOG</a></li>
                     <li><a class="nav-links" href="#">ABOUT</a></li>
-                    <li><a class="nav-links" href="#">CONTACT</a></li>
+                    <li><a class="nav-links" href="#">CONTACT</a></li> #}
                 </ul>
 
             </nav>
@@ -50,6 +54,11 @@
             <div class="footer-links">
                 <div>
                     <ul class="footer-social-media-links">
+                    
+                    {% for item in socials.items %}
+                        <li><a href="{{ item.link }}">{{ dump(item.menu_object) }}</a></li>
+                    {% endfor %}
+
                         <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/twitter.svg" alt="twitter"></a></li>
                         <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/linkedin.svg" alt="linkedin"></a></li>
                         <li><a href="#"><img src="{{ function('get_template_directory_uri') }}/images/instagram.svg" alt="instagram"></a></li>
