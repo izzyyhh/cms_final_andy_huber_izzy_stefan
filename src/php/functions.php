@@ -39,6 +39,7 @@ function add_to_context( $context ) {
     //making menu globallz available
     $context['menu'] = new \Timber\Menu( 'Header Menu' );
     $context['socials'] = new \Timber\Menu( 'Footer Socials' );
+    $context['pages_footer'] = new \Timber\Menu( 'Footer Pages' );
     
     return $context;
 }

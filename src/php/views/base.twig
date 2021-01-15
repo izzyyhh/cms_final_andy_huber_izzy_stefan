@@ -9,7 +9,7 @@
     <header>
         <div class="header-wrapper">
             <nav>
-                <a href="#">
+                <a href="{{ site.url }}">
                     <div class="logo">
                         <div class="logo-name">ANDYHUBER</div>
                         <div class="logo-extra">Water solutions</div>
@@ -62,9 +62,9 @@
                 </div>
                 <div>
                     <ul class="footer-page-links">
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">IMPRINT</a></li>
-                        <li><a href="#">PRIVACY POLICY</a></li>
+                        {% for item in pages_footer.items %}
+                            <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

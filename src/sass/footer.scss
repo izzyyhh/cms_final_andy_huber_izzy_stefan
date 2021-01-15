@@ -48,7 +48,7 @@ footer{
             align-items: center;
             
             img, span, .dashicons{
-                height: 30px;
+                font-size: 25px;
                 opacity: 0.8;
                 color: white;
                 transition: 0.2s;
@@ -76,6 +76,7 @@ footer{
         flex-direction: column;
         width: 100%;
         a{
+            text-transform: uppercase;
             color: $white;
             opacity: 0.8;
             font-weight: lighter;

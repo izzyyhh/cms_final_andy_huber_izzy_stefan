@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+        <main>
+    {% for post in posts %}
+        <section>
+            <h2> {{ post.title }} </h2>
+            {% if post.thumbnail != null %}
+                <img src="{{ post.thumbnail.src }}">
+            {% endif %}
+            {{ post.content }}
+        </section>
+    {% endfor %}
+        </main>
+{% endblock %}
