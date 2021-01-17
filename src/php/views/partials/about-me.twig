@@ -6,10 +6,10 @@
             <h3 class="me-name">
                 {{ about_me_post.title }}
             </h3>
-            <p class="me-info-text">
-                {{ about_me_post.content|striptags }}
+            <p class="me-info-text"> 
+                {{ about_me_post.preview|striptags }}
             </p>
-            <a class="white-button about-me-button" href="{{ about_me_post.link }}">Read more</a>
+            <a class="white-button about-me-button" href="{{ about_me_post.custom.url }}">{{ about_me_post.custom.text }}</a>
         </div>
     </div>
 </section>

@@ -36,8 +36,6 @@ section > h2{
     }
 }
 
-
-
 main{
     section:nth-of-type(1){
         margin-top: 3rem;
@@ -88,3 +86,27 @@ main{
         margin: 0 auto;
     }
 //}
+
+
+
+section.page, section.page-list {
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 2em;
+
+        @include breakpoint(tablet){
+            height: 280px;
+            width: 80%;
+        }
+        
+        @include breakpoint(desktop1){
+            height: 300px;
+            width: 50%;
+        }
+    }
+    p{
+        margin-bottom: 2em;
+    }
+}

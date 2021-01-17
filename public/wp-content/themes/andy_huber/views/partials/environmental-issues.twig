@@ -1,8 +1,6 @@
 <section class="environmental-issues">
-    <h2>Environmental Issues</h2>
-    <p>I write about all sorts of environmental Issues to raise awareness about the problems. check out
-        my blog if you're interested.
-    </p>
+    <h2>{{ environmentals[0].terms[0].name }}</h2>
+    <p>{{ environmentals[0].terms[0].description }}</p>
     <ul>
         {% for envi in environmentals %}
             <li><div><a href="{{ envi.link }}"><img src="{{ envi.thumbnail.src }}" alt="{{ envi.thumbnail.alt }}"><span>{{ envi.title }}</span></a></div></li>

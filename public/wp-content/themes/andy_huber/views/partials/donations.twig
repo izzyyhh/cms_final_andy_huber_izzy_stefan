@@ -4,7 +4,7 @@
     </p>
     <ul>
         {% for donate in donations %}
-            <li><div><img src="{{donate.thumbnail.src}}" alt="{{donate.thumbnail.alt}}"><a href="{{donate.link}}" class="white-button darkblue-button" >Donate</a></div></li>
+            <li><div><img src="{{donate.thumbnail.src}}" alt="{{donate.thumbnail.alt}}"><a href="{{ donate.custom.url }}" class="white-button darkblue-button" >{{ donate.custom.text }}</a></div></li>
         {% endfor %}
     </ul>
 </section>

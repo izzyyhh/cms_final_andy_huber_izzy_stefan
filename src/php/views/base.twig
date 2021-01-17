@@ -34,10 +34,12 @@
                 </ul>
 
             </nav>
+            {% block heading %}
             <h1>{{ get_post_custom_values("heading")[0] }}</h1>
-            {% if get_post_custom_values('hero_button_text')[0] != "" and get_post_custom_values('hero_button_url')[0] != "" %}
-            <a class="white-button" href="{{ get_post_custom_values('hero_button_url')[0] }}">{{ get_post_custom_values('hero_button_text')[0] }}</a>
-            {% endif %}
+                {% if get_post_custom_values('hero_button_text')[0] != "" and get_post_custom_values('hero_button_url')[0] != "" %}
+                    <a class="white-button" href="{{ get_post_custom_values('hero_button_url')[0] }}">{{ get_post_custom_values('hero_button_text')[0] }}</a>
+                {% endif %}
+            {% endblock %}
         </div>
     </header>
 
