@@ -1,7 +1,6 @@
 <section class="donate">
-    <h2>Donate</h2>
-    <p>You too can contribute to helping our environment by donating to various environmental
-        organisations. Here are just a few.
+    <h2>{{ donations[0].terms[0].name }} </h2>
+    <p>{{ donations[0].terms[0].description }}
     </p>
     <ul>
         {% for donate in donations %}

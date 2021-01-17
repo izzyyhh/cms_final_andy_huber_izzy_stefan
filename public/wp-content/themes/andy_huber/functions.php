@@ -3,8 +3,8 @@ require_once( __DIR__ . '/vendor/autoload.php' );
 
 // enqueue scripts and styles
 function enqueue_scripts_and_styles() {
-    wp_enqueue_style('main-styles', get_template_directory_uri().'/main.fc78e386a1220692dc6f.css?03e446abeb118085efe0', array(), null, false);
-    wp_enqueue_script( 'main-js', get_template_directory_uri().'/main.js?03e446abeb118085efe0', array(), null, false );
+    wp_enqueue_style('main-styles', get_template_directory_uri().'/main.fc78e386a1220692dc6f.css?be3354625c1f83251828', array(), null, false);
+    wp_enqueue_script( 'main-js', get_template_directory_uri().'/main.js?be3354625c1f83251828', array(), null, false );
 }
 
 //menus
@@ -27,6 +27,13 @@ function cc_mime_types($mimes) {
     return $mimes;
 }
 
+function add_to_twig($twig){
+    $twig->addFunction(new Timber\Twig_Function('get_post_custom_values', 'get_post_custom_values'));
+    
+    return $twig;
+}
+
+add_filter('timber/twig', 'add_to_twig');
 add_filter('upload_mimes', 'cc_mime_types');
 add_action( 'after_setup_theme', 'add_title_tag');
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts_and_styles' );
@@ -40,7 +47,7 @@ function add_to_context( $context ) {
     $context['menu'] = new \Timber\Menu( 'Header Menu' );
     $context['socials'] = new \Timber\Menu( 'Footer Socials' );
     $context['pages_footer'] = new \Timber\Menu( 'Footer Pages' );
-    
+
     return $context;
 }
 
