@@ -51,14 +51,13 @@ header{
     width: 100%;
     justify-content: space-evenly;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: -1000px;
     transition: .5s;
     li{
         display: inline-block;
         padding: .5rem 1rem;
         a{
-            display: inline-block;
             text-transform: uppercase;
         }
     }

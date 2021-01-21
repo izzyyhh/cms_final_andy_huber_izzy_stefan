@@ -9,8 +9,59 @@ $hamburger-hover-opacity       : 0.7;
 
 @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
-.active-nav{
+ul.active-nav{
+
+    li{
+        padding: 1rem !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.507);
+
+        &:hover, &:focus{
+            background-color: rgba(0, 0, 0, 0.178);
+        }
+
+        a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     left: 0 !important;
+    -webkit-box-shadow: 5px -3px 14px 1px rgba(0,0,0,0.51); 
+    box-shadow: 5px -3px 14px 1px rgba(0,0,0,0.51);
+    justify-content: start !important;
+    flex-direction: column !important;
+    background-color: whitesmoke;
+    width: 70% !important;
+    height: 200vw;
+
+    [aria-current="page"]{
+        border: none !important;
+        
+        &:hover{
+            color: $black !important;
+        }
+
+        &::before{
+            content: "→  " !important;
+        }
+    }
+}
+
+.active-nav a.nav-links{
+    color: black;
+        
+    &:visited{
+        color: black;
+    }
+
+    &:hover, &:focus{
+        border: none !important;
+    }
+
+    &::before{
+        content: "   ";
+    }
 }
 
 @include breakpoint(desktop1){
