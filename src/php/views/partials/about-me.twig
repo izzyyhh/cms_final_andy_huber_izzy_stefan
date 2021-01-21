@@ -7,7 +7,7 @@
                 {{ about_me_post.title }}
             </h3>
             <p class="me-info-text"> 
-                {{ about_me_post.preview|striptags }}
+                {{ about_me_post.preview.read_more('')|striptags }}
             </p>
             <a class="white-button about-me-button" href="{{ about_me_post.custom.url }}">{{ about_me_post.custom.text }}</a>
         </div>
