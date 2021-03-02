@@ -7,7 +7,7 @@ require 'recipe/common.php';
 set('application', 'andy_huber');
 
 // Project repository
-set('repository', 'git@github.com:izzyyhh/cms_final_andy_huber_izzy_stefan.git');
+set('repository', 'https://github.com/izzyyhh/cms_final_andy_huber_izzy_stefan.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
@@ -23,9 +23,9 @@ set('allow_anonymous_stats', false);
 // set('writable_use_sudo', 'true');
 
 // Host
-host('vm-fuchsia.multimediatechnology.at')
-    ->user('admin')
-    ->port(5412)
+host('207.154.202.179')
+    ->user('root')
+    ->port(22)
     ->set('deploy_path', '~/{{application}}');
 
 // Composer
